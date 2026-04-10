@@ -13,12 +13,20 @@ import {
   initSmoothScroll,
   initAllMagneticButtons 
 } from './utils.js';
+import { initBackground } from './background.js';
+import { initAnimations } from './animations.js';
 
 /**
  * Инициализация приложения после загрузки DOM
  */
 document.addEventListener('DOMContentLoaded', () => {
   console.log('☕ Точка Черного - приложение запущено');
+  
+  // Инициализация WebGL фона (шейдер дыма)
+  initBackground();
+  
+  // Инициализация GSAP анимаций
+  initAnimations();
   
   // Инициализация всех модулей
   initMenu();
