@@ -5,6 +5,7 @@
 
 import { initMenu } from './menu.js';
 import { initCart, openCartModal } from './cart.js';
+import { CoffeeQuiz } from './quiz.js';
 import { 
   initScrollAnimations, 
   initHeaderScroll, 
@@ -27,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollAnimations();
   initAllMagneticButtons();
+  
+  // Инициализация кофейного квиза
+  new CoffeeQuiz();
   
   // Дополнительные улучшения
   setupAccessibility();
