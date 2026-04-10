@@ -214,3 +214,61 @@
     /* --color-graphite: #f5f5f5; */
   }
 }
+
+/* Адаптивность для секции квиза */
+@media (max-width: 768px) {
+  .quiz-section {
+    padding: 40px 0;
+  }
+
+  #coffee-quiz {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .quiz-question {
+    font-size: 1.5rem;
+  }
+
+  .result-drink {
+    font-size: 2rem;
+  }
+
+  .add-to-cart-btn,
+  .restart-quiz-btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .quiz-section .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  #coffee-quiz {
+    padding: 1.5rem 1rem;
+  }
+
+  .quiz-option {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .result-icon {
+    font-size: 3rem;
+  }
+
+  .result-drink {
+    font-size: 1.75rem;
+  }
+
+  .result-price {
+    font-size: 1.5rem;
+  }
+}

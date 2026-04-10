@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="src/styles/menu.css">
   <link rel="stylesheet" href="src/styles/about.css">
   <link rel="stylesheet" href="src/styles/cart.css">
+  <link rel="stylesheet" href="src/styles/quiz.css">
   <link rel="stylesheet" href="src/styles/responsive.css">
 </head>
 <body>
@@ -76,6 +77,18 @@
       
       <div class="menu-grid">
         <!-- Карточки будут загружены динамически из menu.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция Кофейный Квиз -->
+  <section class="quiz-section section">
+    <div class="container">
+      <h2 class="section-title fade-in">Подбор напитка</h2>
+      <p class="section-subtitle fade-in">Ответьте на 3 вопроса и мы подберем идеальный кофе для вас</p>
+      
+      <div id="coffee-quiz" class="fade-in">
+        <!-- Квиз будет загружен через JS -->
       </div>
     </div>
   </section>
@@ -238,6 +251,10 @@
 
   <!-- Контейнер для уведомлений -->
   <div class="toast-container"></div>
+
+  <!-- GSAP for Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <!-- Главный скрипт приложения (ES Module) -->
   <script type="module" src="src/scripts/main.js"></script>

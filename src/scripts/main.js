@@ -5,6 +5,7 @@
 
 import { initMenu } from './menu.js';
 import { initCart, openCartModal } from './cart.js';
+import { CoffeeQuiz } from './quiz.js';
 import { 
   initScrollAnimations, 
   initHeaderScroll, 
@@ -12,12 +13,20 @@ import {
   initSmoothScroll,
   initAllMagneticButtons 
 } from './utils.js';
+import { initBackground } from './background.js';
+import { initAnimations } from './animations.js';
 
 /**
  * Инициализация приложения после загрузки DOM
  */
 document.addEventListener('DOMContentLoaded', () => {
   console.log('☕ Точка Черного - приложение запущено');
+  
+  // Инициализация WebGL фона (шейдер дыма)
+  initBackground();
+  
+  // Инициализация GSAP анимаций
+  initAnimations();
   
   // Инициализация всех модулей
   initMenu();
@@ -27,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollAnimations();
   initAllMagneticButtons();
+  
+  // Инициализация кофейного квиза
+  new CoffeeQuiz();
   
   // Дополнительные улучшения
   setupAccessibility();
